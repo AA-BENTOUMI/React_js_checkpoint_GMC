@@ -8,11 +8,14 @@ import {
   Col,
   Container,
   Carousel,
+  Button,
 } from "react-bootstrap";
 import Footer from 'rc-footer';
+
 function App() {
   return (
     <div className="App">
+      {/* Navbar react-bootstrap */}
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -44,6 +47,7 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      {/* carousel react-bootstrap */}
       <Carousel fade>
         <Carousel.Item>
           <img
@@ -62,7 +66,6 @@ function App() {
             src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
             alt="Second slide"
           />
-
           <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -74,7 +77,6 @@ function App() {
             src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"
             alt="Third slide"
           />
-
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -83,6 +85,7 @@ function App() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      {/* Form react-bootstrap */}
       <Form>
         <Row>
           <Col>
@@ -111,7 +114,11 @@ function App() {
             <Form.Control as="textarea" rows={3} placeholder="Comment" />
           </Col>
         </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
       </Form>
+      {/* Footer react-footer */}
       <Footer
         columns={[
           {
@@ -123,13 +130,12 @@ function App() {
             ),
             title: "react-bootstrap",
             url: "https://react-bootstrap.github.io/",
-            description: "知识创作与分享工具",
+            description: "react-bootstrap",
             openExternal: true,
           },
         ]}
         bottom="Made with ❤️ by Amen Allah"
       />
-
     </div>
   );
 }
